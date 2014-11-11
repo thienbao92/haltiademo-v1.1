@@ -1,8 +1,13 @@
-<ion-view title="{{news[newsId].title}}">
+<ion-view title="News">
   <ion-content class="has-header">
     <h1>{{news[newsId].title}}</h1>
     <p>{{news[newsId].date}}</p>
     <img class="full-image" src="{{news[newsId].thumbnail}}">
     <p>{{news[newsId].content}}</p>
   </ion-content>
+  <div class="bar bar-footer bar-positive">
+    <button class="button button-full button-clear button-light">
+      Share
+    </button>
+  </div>
 </ion-view>

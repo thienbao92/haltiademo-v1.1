@@ -4,7 +4,7 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <ion-list>
-      <ion-item class="item-thumbnail-left" ng-repeat="anews in news" href="#/app/news/{{anews.id}}">
+      <ion-item class="item-thumbnail-right" ng-repeat="anews in news | orderBy:'-id'" href="#/app/news/{{anews.id}}" ng-if="!$first">
         <img src="{{anews.thumbnail}}">
         <h2>{{anews.title}}</h2>
         <p>{{anews.date}}</p>
