@@ -33,16 +33,46 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.factory('News', function() {
+  var News = [
+    { title: 'Reggae',
+     thumbnail:'/img/ionic.png',
+     date: '1.11.14',
+     content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+     id: 1 },
+    { title: 'Chill',
+     thumbnail:'/img/ionic.png',
+     date: '2.11.14',
+     content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+     id: 2 },
+    { title: 'Dubstep',
+     thumbnail:'/img/ionic.png',
+     date: '3.11.14',
+     content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', id: 3 },
+    { title: 'Indie',
+     thumbnail:'/img/ionic.png',
+     date: '4.11.14',
+     content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+     id: 4 },
+    { title: 'Rap',
+     thumbnail:'/img/ionic.png',
+     date: '5.11.14',
+     content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+     id: 5 },
+    { title: 'Cowbell',
+     thumbnail:'/img/ionic.png',
+     date: '6.11.14',
+     content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+     id: 6 }
   ];
+  return News;
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('NewsCtrl', function($scope, News) {
+  $scope.news = News;
+})
+
+.controller('ANewsCtrl', function($scope, $stateParams, News) {
+  $scope.newsId = parseInt($stateParams.newsId) - 1;
+  $scope.news = News;
 });
