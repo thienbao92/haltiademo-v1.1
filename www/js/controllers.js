@@ -119,14 +119,6 @@ angular.module('starter.controllers', [])
 .controller('ANewsCtrl', function($scope, $stateParams, News) {
   $scope.newsId = parseInt($stateParams.newsId) - 1;
   $scope.news = News;
-})
 
+});
 
-
-
-
-
-
-
-
-;
