@@ -6,7 +6,7 @@ angular.module('mapcontroller', [])
 
     //Geolocation
         L.control.locate({
-                position: 'topleft',  // set the location of the control
+                position: 'topright',  // set the location of the control
                 locateOptions: {enableHighAccuracy: true},  // define location options e.g enableHighAccuracy: true or maxZoom: 10
 
                 drawCircle: true,  // controls whether a circle is drawn that shows the uncertainty about the location
@@ -20,7 +20,7 @@ angular.module('mapcontroller', [])
                 markerStyle: {},
                 followCircleStyle: {},  // set difference for the style of the circle around the user's location while following
                 followMarkerStyle: {},
-                icon: 'fa fa-map-marker',  // class for icon, fa-location-arrow or fa-map-marker
+                icon: 'fa fa-location-arrow',  // class for icon, fa-location-arrow or fa-map-marker
                 iconLoading: 'fa fa-spinner fa-spin',  // class for loading icon
                 circlePadding: [0, 0], // padding around accuracy circle, value is passed to setBounds
                 metric: true,  // use metric or imperial units
