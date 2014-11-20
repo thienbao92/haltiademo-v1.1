@@ -1,0 +1,14 @@
+<ion-view title="News">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="item-thumbnail-right" ng-repeat="anews in news | orderBy:'-id'" href="#/app/news/{{anews.id}}" ng-if="!$first">
+        <img src="{{anews.thumbnail}}">
+        <h2>{{anews.title}}</h2>
+        <p>{{anews.date}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

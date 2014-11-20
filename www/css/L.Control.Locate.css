@@ -3,12 +3,14 @@
 	-webkit-border-radius: 7px 7px 7px 7px;
 	        border-radius: 7px 7px 7px 7px;
 	border-bottom: none;
+
 }
 
 .leaflet-control-locate a {
-	font-size: 2em;
+	font-size: 1.4em;
 	margin-left: 1px;
-    color: black;
+    color: #444;
+
 }
 
 .leaflet-control-locate.active a {
@@ -23,4 +25,5 @@
 	box-shadow: none;
 	border: 2px solid rgba(0,0,0,0.2);
 	background-clip: padding-box;
+	
 }

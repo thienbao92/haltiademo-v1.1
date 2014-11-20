@@ -5,12 +5,34 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
+
+<!-- CSS -->
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
+<!-- LeafletCSS   -->  
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+    <link rel="stylesheet" type="text/css" href="css/leaflet.css">
+
+    <!-- Control locate -->
+    <link rel="stylesheet" type="text/css" href="css/L.Control.Locate.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+
+
+
+<!-- leaflet js Library -->
+    <script type="text/javascript" src="lib/map/leaflet.js"></script>
+    <script type="text/javascript" src="lib/map/leaflet-src.js"></script>
+    <!-- Control location JS -->
+    <script type="text/javascript" src="js/L.Control.Locate.js"></script>
+    <!-- Group Layer -->
+    <script type="text/javascript" src="js/leaflet.groupedlayercontrol.js"></script>
+    <script type="text/javascript" src="js/geoJSON.js"></script>
+
+
+
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -21,6 +43,8 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/mapController.js"></script>
+
   </head>
 
   <body ng-app="starter">

@@ -1,0 +1,14 @@
+<ion-view title="Event">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="item-thumbnail-right" ng-repeat="event in events | orderBy:'-id'" href="#/app/events/{{event.id}}" ng-if="!$first">
+        <img src="{{event.thumbnail}}">
+        <h2>{{event.title}}</h2>
+        <p>{{event.date}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
