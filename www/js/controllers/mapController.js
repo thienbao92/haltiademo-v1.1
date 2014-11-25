@@ -1,8 +1,14 @@
 angular.module('mapcontroller', [])
 .controller('MapCtrl', function($scope) {
   $scope.init = function() {
-    var map = L.map('map').setView([60.293738, 24.554985], 14);
-    var layer = L.tileLayer('http://{s}.tiles.mapbox.com/v3/thienbao92.jh2og94p/{z}/{x}/{y}.jpg', { maxZoom: 17}).addTo(map);
+    var map = L.map('map').setView([60.308567, 24.509149], 14);
+    var layer = L.tileLayer('http://{s}.tiles.mapbox.com/v3/thienbao92.jh2og94p/{z}/{x}/{y}.jpg', { maxZoom: 17, minZoom: 14}).addTo(map);
+        // /lib/map/nuuksio
+    
+    // boundaries
+        var southWest = L.latLng(60.256581, 24.588300),
+            northEast = L.latLng(60.362694, 24.373380),
+            bounds = L.latLngBounds(southWest, northEast);
 
     //Geolocation
         L.control.locate({
@@ -45,37 +51,38 @@ angular.module('mapcontroller', [])
                      "Red Trail" : L.geoJson(redtrail, {
                         style: redTrail,
                         onEachFeature: function (feature, layer) {
-                            layer.bindPopup('This is red Trail! <br/> 2Km');
+                            layer.bindPopup('<h5><strong>This is red Trail!</strong></h5> <br> <h5>2 Km</h5> <br> <img width="100%" height="100%" src="img/haltia-en-black.png"> ');
+                                
                         }
                     }),
 
                      "Blue Trail" : L.geoJson(bluetrail, {
                         style: blueTrail,
                         onEachFeature: function (feature, layer) {
-                            layer.bindPopup('This is Blue Trail! <br/> 4Km');
+                            layer.bindPopup('<h5><strong>This is Blue Trail!</strong></h5> <br> <h5>4 Km</h5> <br> <img width="100%" height="100%" src="img/haltia-en-black.png"> ');
                         }
-                    }),
+                    }), //end trail
 
                      "Yellow Trail" : L.geoJson(yellowtrail, {
                         style: yellowTrail,
                         onEachFeature: function (feature, layer) {
-                            layer.bindPopup('This is Yellow Trail! <br/> 7Km');
+                            layer.bindPopup('<h5><strong>This is Yellow Trail!</strong></h5> <br> <h5>7 Km</h5> <br> <img width="100%" height="100%" src="img/haltia-en-black.png"> ');
                         }
-                    }),
+                    }),//end trail
 
                      "Brown Trail" : L.geoJson(browntrail, {
                         style: brownTrail,
                         onEachFeature: function (feature, layer) {
                             layer.bindPopup('This is Brown Trail! <br/> 4Km');
                         }
-                    }),
+                    }),//end trail
 
                      "Wheelchair Trail" : L.geoJson(wheelchairtrail, {
                         style: wheelchairTrail,
                         onEachFeature: function (feature, layer) {
                             layer.bindPopup('This is Wheelchair Trail! <br/> 2 Km');
                         }
-                    }),
+                    }),//end trail
                     
                 },
 
@@ -84,20 +91,35 @@ angular.module('mapcontroller', [])
 
                     pointToLayer: function (feature, latlng) {
                         return L.marker(latlng, {icon: infoIcon});
+                    },
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup('Testing');
                     }
-                }),
+
+                }),//end point
 
                         "Fishing" : L.geoJson(fishing, {
 
                     pointToLayer: function (feature, latlng) {
                         return L.marker(latlng, {icon: fishingIcon});
                     }
-                })
+                }),//end point
+                        "Camp Fire" : L.geoJson(firepoint, {
 
-                },
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng, {icon: infoIcon});
+                    }, //end pointToLayer
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup('<h5><strong>This is Fire Camp!</strong></h5> <img  width="50%" src="android_assets/img/warning.png"> <h5>Please make fire camp in this point ONLY! </h5> '); //end popup content
+                    } //end onEachFeature
+
+                }),//end point
+
+
+                }, //end point group
 
                 
-            };
+            }; // end Layer control
 
         var layerControl = L.control.groupedLayers(baseLayers, overlayLayers, {position:'topleft'});
         map.addControl(layerControl);
