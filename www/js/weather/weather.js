@@ -1,14 +1,4 @@
-/**
-* menu.controller Module
-*
-* Description
-*/
-angular.module('menu.controller', [])
-
-.controller('menuCtrl', ['$scope', function($scope){
-	
-	$scope.init = function (){
-
+$(document).ready(function($) {
   $.simpleWeather({
     location: 'Helsinki, FI',
     woeid: '',
@@ -21,7 +11,5 @@ angular.module('menu.controller', [])
     error: function(error) {
       $("#weather").html('<p>'+error+'</p>');
     }
-  
+  });
 });
-	};
-}]);
