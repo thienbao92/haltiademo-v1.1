@@ -21,7 +21,8 @@
    text-decoration:none;
    height: 8em ;
    width: 40% ;
-    box-shadow: 10px 10px 10px #888888;
+     box-shadow: 2px 2px 0px #212121;
+
  }
  div.textmap{
   position: relative;
@@ -54,7 +55,8 @@
  text-decoration:none;
  height: 8em ;
  width: 40% ;
-
+  box-shadow: 2px 2px 5px #212121;
+  margin-left: 1%;
 }
 
 .news:active {
@@ -68,7 +70,7 @@ div.textnews{
 .event {
   -moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
   -webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
-  box-shadow:inset 0px 1px 0px 0px #9acc85;
+  box-shadow:inset 2px 2px 5px 0px #9acc85;
   background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #168534), color-stop(1, #168534));
   background:-moz-linear-gradient(top, #168534 5%, #168534 100%);
   background:-webkit-linear-gradient(top, #168534 5%, #168534 100%);
@@ -76,7 +78,7 @@ div.textnews{
   background:-ms-linear-gradient(top, #168534 5%, #168534 100%);
   background:linear-gradient(to bottom, #168534 5%, #168534 100%);
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#168534', endColorstr='#168534',GradientType=0);
-  background-color:#4CAF50;
+  background-color:;
   border:0px solid #3b6e22;
   display:inline-block;
   cursor:pointer;
@@ -86,7 +88,9 @@ div.textnews{
   padding:10px 6px;
   text-decoration:none;
   height: 8em ;
-  width: 40% ;
+  width: 39% ;
+    box-shadow: 2px 2px 5px #212121;
+
 }
 div.textevent{
   position: relative;
@@ -114,10 +118,11 @@ div.textevent{
   color:#ffffff;
   font-family:arial;
   font-size:13px;
-  padding:10px 6px;
+  padding:10px 10px;
   text-decoration:none;
   height: 8em ;
-  width: 40% ;
+  width: 39% ;
+  margin-left: 1%;
 }
 div.textdirection{
   position: relative;
@@ -129,17 +134,8 @@ div.textdirection{
 }
 
 .feedback {
- -moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
- -webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
- box-shadow:inset 0px 1px 0px 0px #9acc85;
- background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #168534), color-stop(1, #168534));
- background:-moz-linear-gradient(top, #168534 5%, #168534 100%);
- background:-webkit-linear-gradient(top, #168534 5%, #168534 100%);
- background:-o-linear-gradient(top, #168534 5%, #168534 100%);
- background:-ms-linear-gradient(top, #168534 5%, #168534 100%);
- background:linear-gradient(to bottom, #168534 5%, #168534 100%);
- filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#168534', endColorstr='#168534',GradientType=0);
- background-color:#4CAF50;
+ /**/
+ background-color: #4CAF50;
  border:0px solid #3b6e22;
  display:inline-block;
  cursor:pointer;
@@ -150,14 +146,16 @@ div.textdirection{
  text-decoration:none;
  width: 100% ;
  height: 3em ;
+   box-shadow: 2px 2px 5px #212121;
+
 }
 
-.feedback:active {
+/*.feedback:active {
   position:relative;
   top:1px;
-}
+}*/
 .facebook {
-  -moz-box-shadow:inset 0px 1px 0px 0px #9fb4f2;
+ /* -moz-box-shadow:inset 0px 1px 0px 0px #9fb4f2;
   -webkit-box-shadow:inset 0px 1px 0px 0px #9fb4f2;
   box-shadow:inset 0px 1px 0px 0px #9fb4f2;
   background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
@@ -166,8 +164,8 @@ div.textdirection{
   background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
   background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
   background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
-  background-color:#d3ffbf;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);*/
+  background-color:#2962FF;
   border:0px solid #4e6096;
   display:inline-block;
   cursor:pointer;
@@ -178,17 +176,10 @@ div.textdirection{
   text-decoration:none;
   width: 100% ;
   height: 3em ;
+ box-shadow: 2px 2px 6px #212121;
+
 }
-.facebook:hover {
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
-  background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
-  background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
-  background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
-  background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
-  background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
-  background-color:#476e9e;
-}
+
 .facebook:active {
   position:relative;
   top:1px;
@@ -201,30 +192,32 @@ div.weather{
 
 h1{
   position: relative;
-  top: -10% auto;
-  margin:20%;
+  margin-bottom: 30px ;
+  
   margin-right:-25px;
   margin-left: 25px;
 }
-h2.top{
+h2{
   position: relative;
   top: -10px auto;
-  margin:20%;
-  margin-right:-25px;
-  margin-left: 25px}
-  h3{
+  margin-bottom:35px;
+  margin-right:-33px;
+  margin-left: 25px;}
+h3{
     position: relative;
     top: -10px auto;
-    margin:22px ;
+     margin:25px;
 
+      box-shadow: 2px 2px 5px #212121;
   }
   h4{
     position: relative;
     top: -10px auto;
-    margin:22px;
+    margin:25px;
+      box-shadow: 2px 2px 5px #212121;
   }
-  div.main{
-    background-color: #263238;
+  .main{
+    background-color:#263238 ;
   }
   /*insert image and text*/
 
@@ -233,6 +226,7 @@ h2.top{
     vertical-align: bottom;
     background-size: 35% auto; 
     background-color:#4CAF50;
+
   }
   .news{
     background: url("news.png") no-repeat center;
@@ -252,8 +246,4 @@ h2.top{
     vertical-align: bottom;
     background-size: 40% auto; 
     background-color:#4CAF50;
-
-  }
-  .feedback{
-    background-color: #4CAF50;
   }
