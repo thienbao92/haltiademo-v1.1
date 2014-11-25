@@ -505,8 +505,7 @@ var redTrail ={
     "color": "red",
     "weight": 3,
     "opacity": 1,                
-    "dashArray": '20,15',
-    "lineJoin": 'round'
+
 
 };
 
@@ -994,8 +993,6 @@ var blueTrail ={
     "color": "blue",
     "weight": 3,
     "opacity": 0.65,                
-    "dashArray": '20,15',
-    "lineJoin": 'round'
 
 };
 
@@ -1698,10 +1695,9 @@ var yellowtrail = {
 
 var yellowTrail ={
     "color": "yellow",
-    "weight": 3,
+    "weight": 5,
     "opacity": 1,                
-    "dashArray": '20,15',
-    "lineJoin": 'round'
+    
 
 };
 
@@ -2041,8 +2037,7 @@ var brownTrail ={
     "color": "brown",
     "weight": 3,
     "opacity": 1,                
-    "dashArray": '20,15',
-    "lineJoin": 'round'
+   
 };
 
 //wheelchair trail
@@ -2397,13 +2392,58 @@ var smallstreet = {
     }
   ]
 };
+
+
 //info port
-var point = {
+var firepoint = {
   "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
       "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.490671157836914,
+          60.30197503489077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.498567581176758,
+          60.30981958455853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.48921203613281,
+          60.31024470959647
+        ]
+      }
+    }
+  ]
+};
+
+
+
+var point = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [

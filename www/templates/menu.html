@@ -1,12 +1,13 @@
 <ion-side-menus>
 
   <ion-side-menu-content>
-    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+    <ion-nav-bar class="bar bar-header bar-green">
       <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
     </ion-nav-bar>
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-side-menu-content>
 
+<<<<<<< HEAD
   <ion-side-menu side="left" width="300 + 0">
   <div class="main">
         <div id="weather" ng-init="init()" ></div>  
@@ -43,5 +44,27 @@
   </div>
 </h4>
 </div>
+=======
+  <ion-side-menu side="left">
+<!--     <header class="bar bar-header bar-stable">
+      <h1 class="title">Left</h1>
+    </header> -->
+    <ion-content >
+      <ion-list>
+        <ion-item nav-clear menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/events">
+          Event
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/map">
+          Map
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/news">
+          News
+        </ion-item>
+      </ion-list>
+    </ion-content>
+>>>>>>> origin/master
   </ion-side-menu>
 </ion-side-menus>
