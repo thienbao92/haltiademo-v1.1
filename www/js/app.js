@@ -67,6 +67,16 @@ angular.module('starter', [
       }
     })
 
+        .state('app.direction', {
+      url: "/direction",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/direction.html",
+          
+        }
+      }
+    })
+
     .state('app.news', {
       url: "/news",
       views: {
