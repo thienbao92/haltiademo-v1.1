@@ -10,6 +10,7 @@ angular.module('starter', [
   'mapcontroller', 
   'newsServices', 
   'menu.controller'
+
   ])
 
 .run(function($ionicPlatform) {
@@ -25,6 +26,8 @@ angular.module('starter', [
     }
   });
 })
+
+
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -72,7 +75,7 @@ angular.module('starter', [
       views: {
         'menuContent' :{
           templateUrl: "templates/direction.html",
-          
+          controller: 'directionCtrl'
         }
       }
     })
@@ -95,7 +98,10 @@ angular.module('starter', [
           controller: 'ANewsCtrl'
         }
       }
-    });
+    })
+
+        
+    ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/map');
 });
