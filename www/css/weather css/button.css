@@ -19,9 +19,10 @@
    font-variant:left;
    padding:10px 6px;
    text-decoration:none;
-   height: 8em ;
-   width: 40% ;
-     box-shadow: 2px 2px 0px #212121;
+   height: 95px ;
+   width: 36% ;
+   margin-left: -2px;
+     box-shadow: 2px 2px 5px #212121;
 
  }
  div.textmap{
@@ -53,8 +54,9 @@
  font-size:13px;
  padding:10px 6px;
  text-decoration:none;
- height: 8em ;
- width: 40% ;
+ height: 95px ;
+ margin-top: 30px;
+ width: 36% ;
   box-shadow: 2px 2px 5px #212121;
   margin-left: 1%;
 }
@@ -87,8 +89,8 @@ div.textnews{
   font-size:13px;
   padding:10px 6px;
   text-decoration:none;
-  height: 8em ;
-  width: 39% ;
+  height: 95px ;
+  width: 35% ;
     box-shadow: 2px 2px 5px #212121;
 
 }
@@ -120,9 +122,11 @@ div.textevent{
   font-size:13px;
   padding:10px 10px;
   text-decoration:none;
-  height: 8em ;
-  width: 39% ;
+  height: 95px ;
+  width: 35% ;
   margin-left: 1%;
+  box-shadow: 2px 2px 5px #212121;
+
 }
 div.textdirection{
   position: relative;
@@ -141,15 +145,18 @@ div.textdirection{
  cursor:pointer;
  color:#ffffff;
  font-family:arial;
- font-size:13px;
+ font-size:18px;
  padding:10px 6px;
  text-decoration:none;
- width: 100% ;
- height: 3em ;
+ width: 80% ;
+ height: 35px ;
    box-shadow: 2px 2px 5px #212121;
 
 }
-
+div.textfeedback{
+  position: relative;
+  top: -5px;
+}
 /*.feedback:active {
   position:relative;
   top:1px;
@@ -171,15 +178,19 @@ div.textdirection{
   cursor:pointer;
   color:#ffffff;
   font-family:arial;
-  font-size:13px;
+  font-size:18px;
   padding:10px 6px;
+  text-align: center;
   text-decoration:none;
-  width: 100% ;
-  height: 3em ;
+  width: 80% ;
+  height: 35px;
  box-shadow: 2px 2px 6px #212121;
 
 }
-
+div.textfacebook{
+   position: relative;
+  top: -5px;
+}
 .facebook:active {
   position:relative;
   top:1px;
@@ -187,34 +198,37 @@ div.textdirection{
 /*div css*/
 div.weather{
   top:-100px;
+  
 
 }
 
 h1{
-  position: relative;
-  margin-bottom: 30px ;
-  
+  position:relatvie;
+  margin-bottom: 20px ;
+
   margin-right:-25px;
-  margin-left: 25px;
+  margin-left: 40px;
 }
 h2{
   position: relative;
   top: -10px auto;
-  margin-bottom:35px;
+  margin-bottom:20px;
   margin-right:-33px;
-  margin-left: 25px;}
+  margin-left: 38px;}
 h3{
     position: relative;
     top: -10px auto;
-     margin:25px;
-
-      box-shadow: 2px 2px 5px #212121;
+     margin:35px;
+     margin-right: -10px;
+     margin-bottom: -5px;
+     margin-left: 38px;
   }
   h4{
     position: relative;
     top: -10px auto;
     margin:25px;
-      box-shadow: 2px 2px 5px #212121;
+    margin-right: -10px;
+     margin-left: 38px;
   }
   .main{
     background-color:#263238 ;
@@ -231,13 +245,13 @@ h3{
   .news{
     background: url("news.png") no-repeat center;
     vertical-align: bottom;
-    background-size: 75% auto; 
+    background-size: 85% auto; 
     background-color:#4CAF50;
   }
   .event{
     background: url("event.png") no-repeat center;
     vertical-align: bottom;
-    background-size: 50% auto; 
+    background-size: 60% auto; 
     background-color:#4CAF50;
 
   }
@@ -247,3 +261,12 @@ h3{
     background-size: 40% auto; 
     background-color:#4CAF50;
   }
+.scroll{
+  position: relative;
+  height:100%;
+    top: 0px!important;
+
+  bottom: 2000px!important;
+  left: 0 !important;
+  right: 0 !important;
+}

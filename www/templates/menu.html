@@ -9,7 +9,10 @@
 
 <<<<<<< HEAD
   <ion-side-menu side="left" width="300 + 0" class="main">
+         
+
         <div id="weather" ng-init="init()" ></div>  
+      <ion-scroll direction="y" zooming="true" min-zoom="1" scroll="true"class="scroll">
 <h1>
       <button nav-clear menu-close class="maps" onclick="window.location.href='#/app/map'">
        <div class="textmap"> Map</div>
@@ -29,13 +32,13 @@
 </h2>
     <h3>
         <button  nav-clear menu-close class="feedback" onclick="window.location.href='#/app/feedback'">
-          Feedback
+         <div class="textfeedback"> Feedback </div>
         </button>
     </h3>
 <h4>
     <button  nav-clear menu-close class="facebook" onclick="window.location.href='#/app/facebook'">
-      Facebook
+     <div class="textfacebook"> Facebook </div>
     </button>
 </h4>
-
+</ion-scroll>
 </ion-side-menus>
