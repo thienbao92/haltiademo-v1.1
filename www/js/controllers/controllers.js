@@ -60,11 +60,18 @@ angular.module('starter.controllers', [])
   $scope.news = News;
 })
 
-.controller('directionCtrl', function($scope, $cordovaClipboard) {
+.controller('directionCtrl', function($scope, $cordovaClipboard, $ionicPopup ,$timeout) {
    
    $scope.copy = function() {
-    
-   };
+   var alertPopup = $ionicPopup.alert({
+     title: 'Copy address',
+     template: 'copy success'
+   });
+     $timeout(function() {
+     alertPopup.close(); //close the popup after 3 seconds for some reason
+  }, 1500);
+ };
+    // end scope
 
 
    
