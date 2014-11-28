@@ -6,6 +6,8 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
   'ionic', 
+  'ngCordova',
+  'ngCordova.plugins.clipboard',
   'starter.controllers', 
   'mapcontroller', 
   'newsServices', 

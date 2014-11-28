@@ -60,9 +60,18 @@ angular.module('starter.controllers', [])
   $scope.news = News;
 })
 
-.controller('directionCtrl', function($scope, Events) {
-  
-})
+.controller('directionCtrl', function($scope, $cordovaClipboard) {
+   
+   $scope.copy = function() {
+    
+   };
+
+
+   
+
+
+
+}) //end directionCtrl
 
 
 
