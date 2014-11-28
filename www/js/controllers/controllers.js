@@ -1,6 +1,11 @@
 angular.module('starter.controllers', [])
 
-
+.controller('MainCtrl', function($scope) {
+  ionic.Platform.ready(function() {
+    // hide the status bar using the StatusBar plugin
+    StatusBar.hide();
+  });
+})
 
 .controller('EventsCtrl', function($scope, Events) {
   $scope.events = Events;
