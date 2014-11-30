@@ -30,7 +30,7 @@
 
 	/*font format*/
 	color: #1B5E20;
-	font-size: 20px;
+	font-size: 150%;
 	font-family: roboto;
 	font-weight: bold;
 
@@ -40,16 +40,101 @@
 
 .address {
 	margin-left: 2%;
-};
+	margin-right: 2%;
+}
 
 .content {
 
 	float: left;
+	margin-top: 16px;
 
 	/*font format*/
-	color: #1B5E20;
-	font-size: 20px;
+	color: #424242;
+	font-size: 120%;
 	font-family: roboto;
 	font-weight: bold;
 
+}
+
+.ClipboardButton {
+	float: right;
+	text-align: center;
+	margin-bottom: 5%;
+	box-shadow: 1px 1px 0px 0px #9d9e9c;
+	background-color:#4CAF50;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	display:inline-block;
+	cursor:pointer;
+	color: #fff;
+	font-family:roboto;
+	font-size:120%;
+	padding:16px 16px;
+	padding-left: 15px;
+
+}
+
+
+.ClipboardButton:active, .directionButton:active  {
+	position:relative;
+	top:1px;
+}
+
+
+.directionButton {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 5%;
+
+	-moz-box-shadow: 1px 1px 0px 0px #9d9e9c;
+	-webkit-box-shadow: 1px 1px 0px 0px #9d9e9c;
+	box-shadow: 1px 1px 0px 0px #9d9e9c;
+	background-color:#4CAF50;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	display:inline-block;
+	cursor: pointer;
+	color: white;
+	font-family:roboto;
+	font-size:125%;
+	padding:16px 16px;
+	text-decoration:none;
+
+}
+
+.directionButton:active  {
+	position:relative;
+	top:1px;
+}
+
+
+.googleImg {
+	width: 8%;
+	height: 8%;
+	margin-right: 4px;
+	margin-bottom: -2%;
+	margin-top: -1%;
+
+}
+
+
+
+.hslImg {
+	width: 25%;
+	height: 25%;
+	margin-right: 4px;
+	margin-bottom: -7%;
+	margin-top: -7%;
+}
+
+
+
+/*thu nghiem*/ 
+
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
 }

@@ -11,15 +11,27 @@
 	<p class="h3">Address</p>
 	<div class="address">
 		<p class="content"> Nuuksiontie 84, 02820 Espoo </p>
+		<a ng-click="copy()" class="ClipboardButton">Copy</a>
+
+		<a  onClick="window.open('http://map.google.com/maps?saddr=My+Location&daddr=Nuuksiontie+84,+02820+Espoo','_system','location=yes');return false;" class="directionButton"> 
+
+			<img class="googleImg" src="img/icon/google_marker.png">
+			Get direction using Google Map
+		</a>
+
+		<a onclick="window.open('https://google.com','_system','location=yes');return false;" class="directionButton"> 
+
+			<img class="hslImg" src="img/icon/hsl.png">
+			Get direction using HSL
+		</a>
 
 	</div> <!-- Address -->
 
 
 
+
+
 </div><!--  End container --> 
-
-
-
 
 
 </ion-content>

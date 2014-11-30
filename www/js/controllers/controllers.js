@@ -1,6 +1,11 @@
 angular.module('starter.controllers', [])
 
-
+.controller('MainCtrl', function($scope) {
+  ionic.Platform.ready(function() {
+    // hide the status bar using the StatusBar plugin
+    StatusBar.hide();
+  });
+})
 
 .controller('EventsCtrl', function($scope, Events) {
   $scope.events = Events;
@@ -53,5 +58,29 @@ angular.module('starter.controllers', [])
 .controller('ANewsCtrl', function($scope, $stateParams, News) {
   $scope.newsId = parseInt($stateParams.newsId) - 1;
   $scope.news = News;
-});
+})
+
+.controller('directionCtrl', function($scope, $cordovaClipboard, $ionicPopup ,$timeout) {
+   
+   $scope.copy = function() {
+   var alertPopup = $ionicPopup.alert({
+     title: 'Copy address',
+     template: 'copy success'
+   });
+     $timeout(function() {
+     alertPopup.close(); //close the popup after 3 seconds for some reason
+  }, 1500);
+ };
+    // end scope
+
+
+   
+
+
+
+}) //end directionCtrl
+
+
+
+;
 

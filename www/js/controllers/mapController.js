@@ -2,7 +2,7 @@ angular.module('mapcontroller', [])
 .controller('MapCtrl', function($scope) {
   $scope.init = function() {
     var map = L.map('map').setView([60.308567, 24.509149], 14);
-    var layer = L.tileLayer('http://{s}.tiles.mapbox.com/v3/thienbao92.jh2og94p/{z}/{x}/{y}.jpg', { maxZoom: 17, minZoom: 14}).addTo(map);
+    var layer = L.tileLayer('http://{s}.tiles.mapbox.com/v3/thienbao92.jh2og94p/{z}/{x}/{y}.jpg', { maxZoom: 17, minZoom: 12}).addTo(map);
         // /lib/map/nuuksio
     
     // boundaries

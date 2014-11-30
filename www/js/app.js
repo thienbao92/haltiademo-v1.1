@@ -6,14 +6,19 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
   'ionic', 
+  'ngCordova',
+  'ngCordova.plugins.clipboard',
   'starter.controllers', 
   'mapcontroller', 
   'newsServices', 
   'menu.controller'
+
   ])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
+
+    
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -25,6 +30,8 @@ angular.module('starter', [
     }
   });
 })
+
+
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -72,7 +79,7 @@ angular.module('starter', [
       views: {
         'menuContent' :{
           templateUrl: "templates/direction.html",
-          
+          controller: 'directionCtrl'
         }
       }
     })
@@ -95,8 +102,11 @@ angular.module('starter', [
           controller: 'ANewsCtrl'
         }
       }
-    });
+    })
+
+        
+    ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/map');
+  $urlRouterProvider.otherwise('/app/direction');
 });
 
