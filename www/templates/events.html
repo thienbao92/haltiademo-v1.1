@@ -4,6 +4,7 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <ion-list>
+      <!-- Exclude 1st item -->
       <ion-item class="item-thumbnail-right" ng-repeat="event in events | orderBy:'-id'" href="#/app/events/{{event.id}}" ng-if="!$first">
         <img src="{{event.thumbnail}}">
         <h2>{{event.title}}</h2>
