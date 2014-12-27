@@ -110,7 +110,7 @@ angular.module('mapcontroller', [])
                         return L.marker(latlng, {icon: infoIcon});
                     }, //end pointToLayer
                     onEachFeature: function (feature, layer) {
-                        layer.bindPopup('<h5><strong>This is Fire Camp!</strong></h5> <img  width="50%" src="android_assets/img/warning.png"> <h5>Please make fire camp in this point ONLY! </h5> '); //end popup content
+                        layer.bindPopup('<h5><strong>This is Fire Camp!</strong></h5> <img  width="50%" src="img/warning.png"> <h5>Please make fire camp in this point ONLY! </h5> '); //end popup content
                     } //end onEachFeature
 
                 }),//end point

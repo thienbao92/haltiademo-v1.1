@@ -5,9 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
-  'ionic', 
-  'ngCordova',
-  'ngCordova.plugins.clipboard',
+  'ionic',
   'starter.controllers', 
   'mapcontroller', 
   'newsServices', 
@@ -49,6 +47,17 @@ angular.module('starter', [
         'menuContent' :{
           templateUrl: "templates/events.html",
           controller: 'EventsCtrl'
+
+        }
+      }
+    })
+
+    .state('app.feedback', {
+      url: "/feedback",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/feedback.html",
+          
 
         }
       }

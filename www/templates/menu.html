@@ -7,43 +7,37 @@
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-side-menu-content>
 
-<<<<<<< HEAD
-  <ion-side-menu side="left" width="300 + 0" class="main">
-         
 
-      <div id="weather" ng-init="init()" ></div>  
-<ion-content class="content" > 
-<!-- tao de cai class CSSS nay trong style.css, may keo xuong phia cuoi xem thu.-->
-        <h1>
-              <button nav-clear menu-close class="maps" onclick="window.location.href='#/app/map'">
-               <div class="textmap"> Map</div>
-                </button>
-                <button   nav-clear menu-close class="news" onclick="window.location.href='#/app/news'">
-                <div class="textnews">News</div>
-                </button>
-        </h1>
+  <ion-side-menu side="left" width="300" class="main" >
 
-        <h2>
-            
-                <button  nav-clear menu-close class="event" onclick="window.location.href='#/app/events'">
-                <div class="textevent">Events</div>       
-                 </button>
-                <button  nav-clear menu-close class="direction" onclick="window.location.href='#/app/direction'">
-                <div class="textdirection">Direction</div>
-                </button>
-        </h2>
+        <div id="weather" ng-init="init()" ></div>  
+      <ion-scroll scroll="true" class="scroll" direction="y"  zoom="3">
+<h1>
+      <button nav-clear menu-close class="maps" onclick="window.location.href='#/app/map'"><div class="textmap">Map</div>
+        </button>
+        <button   nav-clear menu-close class="news" onclick="window.location.href='#/app/feedback'">
+        <div class="textnews">Feedback</div>
+        </button>
+</h1>
+<h2>
+    
+        <button  nav-clear menu-close class="event" onclick="window.location.href='#/app/events'">
+        <div class="textevent">News & Events</div>       
+         </button>
+        <button  nav-clear menu-close class="direction" onclick="window.location.href='#/app/direction'">
+        <div class="textdirection">Direction</div>
+        </button>
+</h2>
+    <h3>
+        <button  nav-clear menu-close class="feedback" onclick="window.open('http://www.pinterest.com/VisitHaltia/','_system','location=yes');return false;">
+         <div class="textfeedback"> Pinterest </div>
+        </button> 
+    </h3>
+<h4>
+    <button  nav-clear menu-close class="facebook" onclick="window.open('https://www.facebook.com/haltiacom','_system','location=yes');return false;">
+     <div class="textfacebook"> Facebook </div>
+    </button>
+</h4>
 
-        <h3>
-            <button  nav-clear menu-close class="feedback" onclick="window.location.href='#/app/feedback'">
-             <div class="textfeedback"> Feedback </div>
-            </button>
-        </h3>
-
-        <h4>
-            <button  nav-clear menu-close class="facebook" onclick="window.location.href='#/app/facebook'">
-             <div class="textfacebook"> Facebook </div>
-            </button>
-        </h4>
-
-</ion-content>
+</ion-sroll>
 </ion-side-menus>
