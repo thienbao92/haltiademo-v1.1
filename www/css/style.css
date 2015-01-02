@@ -1,5 +1,13 @@
 /* Empty. Add your own CSS if you like */
 
+/* Event 1st item */
+.item1st {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 /*Haltia bar*/
 .bar.bar-green {
 	border-color: #4CAF50;
