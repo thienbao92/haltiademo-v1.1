@@ -117,29 +117,5 @@ angular.module('starter', [
     ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/direction');
-})
-
-.controller('CameraCtrl', function ($scope, $cordovaCamera) {
-    $scope.takePicture = function () {
-      var options = {
-        quality: 50,
-        destinationType: Camera.DestinationType.DATA_URL,
-        sourceType: Camera.PictureSourceType.CAMERA,
-        allowEdit: true,
-        encodingType: Camera.EncodingType.JPEG,
-        targetWidth: 300,
-        targetHeight: 300,
-        popoverOptions: CameraPopoverOptions,
-        saveToPhotoAlbum: false
-      };
-
-      // udpate camera image directive
-      $cordovaCamera.getPicture(options).then(function (imageData) {
-        $scope.cameraimage = "data:image/jpeg;base64," + imageData;
-      }, function (err) {
-        alert('Failed because: ' + message);
-      });
-    };
 });
-;
 

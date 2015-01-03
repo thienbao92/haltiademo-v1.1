@@ -25,6 +25,29 @@ angular.module('starter.controllers', [])
   $scope.news = News;
 })
 
+.controller('CameraCtrl', function ($scope, $cordovaCamera) {
+    $scope.takePicture = function () {
+      var options = {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI,
+        sourceType: Camera.PictureSourceType.CAMERA,
+        allowEdit: true,
+        encodingType: Camera.EncodingType.JPEG,
+        targetWidth: 300,
+        targetHeight: 300,
+        popoverOptions: CameraPopoverOptions,
+        saveToPhotoAlbum: true
+      };
+
+      // udpate camera image directive
+      $cordovaCamera.getPicture(options).then(function (imageURI) {
+        $scope.cameraimage = imageURI;
+      }, function (err) {
+        alert('Failed because: ' + message);
+      });
+    };
+})
+
 .controller('directionCtrl', function($scope) {
 
 
