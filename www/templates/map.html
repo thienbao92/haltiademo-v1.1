@@ -2,7 +2,10 @@
   <ion-nav-buttons side="left">
     <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
-  <ion-content class="has-header">
+  <ion-content class="has-header" ng-controller="CameraCtrl">
     <div ng-init="init()" id="map" data-tap-disabled="true"></div>
+    <div class="button-bar overlay">
+      <button class="button button-full button-positive" ng-click="takePicture()">Take photo</button>
+    </div>
   </ion-content>
 </ion-view>

@@ -35,8 +35,7 @@
   text-rendering: auto;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: white }
+  -moz-osx-font-smoothing: grayscale; }
 
 .ion-spin, .ion-loading-a, .ion-loading-b, .ion-loading-c, .ion-loading-d, .ion-looping, .ion-refreshing, .ion-ios7-reloading {
   -webkit-animation: spin 1s infinite linear;
