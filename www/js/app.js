@@ -10,7 +10,8 @@ angular.module('starter', [
   'starter.controllers', 
   'mapcontroller', 
   'newsServices', 
-  'menu.controller'
+  'menu.controller',
+  'contact.controller'
   ])
 
 .run(function($ionicPlatform) {
@@ -57,7 +58,7 @@ angular.module('starter', [
       views: {
         'menuContent' :{
           templateUrl: "templates/feedback.html",
-          
+          controller: 'ContactCtrl'
 
         }
       }

@@ -3,7 +3,7 @@
     <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
 <ion-content class="has-header">
-<div class="list">
+<!--<div class="list">
   <label class="item item-input">
     <input type="text" placeholder="First Name">
   </label>
@@ -17,8 +17,40 @@
   <label class="item item-input">
     <textarea placeholder="Comments"></textarea>
   </label>
-</div>
-
+</div>-->
+<form ng-submit="submit(contactform)" name="contactform" method="post" action="" role="form">
+        <div ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+            <label for="inputName">Name</label>
+            <div>
+                <input ng-model="formData.inputName" type="text" id="inputName" name="inputName" placeholder="Your Name" required>
+            </div>
+        </div>
+        <div ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+            <label for="inputEmail" >Email</label>
+            <div>
+                <input ng-model="formData.inputEmail" type="email" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+            </div>
+        </div>
+        <div ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+            <label for="inputSubject" >Subject</label>
+            <div>
+                <input ng-model="formData.inputSubject" type="text" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+            </div>
+        </div>
+        <div ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+            <label for="inputMessage" >Message</label>
+            <div>
+                <textarea ng-model="formData.inputMessage" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                <button type="submit" ng-disabled="submitButtonDisabled">
+                    Send Message
+                </button>
+            </div>
+        </div>
+    </form>
 <button class="button button-block button-positive">
   Submit
 </button>
