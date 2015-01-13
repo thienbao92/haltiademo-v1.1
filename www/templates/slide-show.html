@@ -1,0 +1,14 @@
+<ion-view title="Photo Gallery">
+  <ion-content class="has-header">
+    <div class="full-size">
+      <img ng-repeat="photo in photos" ng-show="isActive($index)" ng-src="{{photo.link}}" />
+    </div>
+  </ion-content>
+
+  <button class="button button-light" id="left-slider" ng-click="showPrev()">
+    <i class="icon ion-chevron-left"></i>
+  </button>
+  <button class="button button-light" id="right-slider" ng-click="showNext()">
+    <i class="icon ion-chevron-right"></i>
+  </button>
+</ion-view>

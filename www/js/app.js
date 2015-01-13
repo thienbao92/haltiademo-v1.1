@@ -11,7 +11,9 @@ angular.module('starter', [
   'mapcontroller', 
   'newsServices', 
   'menu.controller',
-  'contact.controller'
+  'contact.controller',
+  'galleryServices',
+  'gallery.controller'
   ])
 
 .run(function($ionicPlatform) {
@@ -90,6 +92,26 @@ angular.module('starter', [
         'menuContent' :{
           templateUrl: "templates/direction.html",
           controller: 'directionCtrl'
+        }
+      }
+    })
+
+        .state('app.gallery', {
+      url: "/gallery",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/gallery.html",
+          controller: 'GalleryCtrl'
+        }
+      }
+    })
+
+    .state('app.slide-show', {
+      url: "/gallery/:photoId",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/slide-show.html",
+          controller: 'SlideShowCtrl'
         }
       }
     })

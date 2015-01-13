@@ -1,0 +1,12 @@
+<ion-view title="Photo Gallery">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ul class="gallery">
+      <li ng-repeat="photo in photos">
+        <a href="#/app/gallery/{{photo.id}}"><img ng-src="{{photo.link}}"/></a>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>
