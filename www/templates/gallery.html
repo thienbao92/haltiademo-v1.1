@@ -5,7 +5,7 @@
   <ion-content class="has-header">
     <ul class="gallery">
       <li ng-repeat="photo in photos">
-        <a href="#/app/gallery/{{photo.id}}"><img ng-src="{{photo.link}}"/></a>
+        <a href="#/app/gallery/{{photo.id}}"><img ng-src="{{urlForImage(photo.link)}}"/></a>
       </li>
     </ul>
   </ion-content>

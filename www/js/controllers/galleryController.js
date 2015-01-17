@@ -1,11 +1,17 @@
 angular.module('gallery.controller', [])
 
-.controller('GalleryCtrl', function($scope, PhotoAlbum) {
-  $scope.photos = PhotoAlbum.photos;
+.controller('GalleryCtrl', function($scope, $cordovaFile, PhotoAlbum) {
+  $scope.photos = PhotoAlbum;
+
+  $scope.urlForImage = function(imageName) {
+      var name = imageName.substr(imageName.lastIndexOf('/') + 1);
+      var trueOrigin = cordova.file.dataDirectory + name;
+      return trueOrigin;
+  };
 })
 
 .controller('SlideShowCtrl', function($scope, PhotoAlbum, $stateParams) {
-    $scope.photos = PhotoAlbum.photos;
+    $scope.photos = PhotoAlbum;
 
 
     // initial image index
